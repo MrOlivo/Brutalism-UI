@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import MenuItem from "../components/MenuItem.astro";
 import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,25 +15,28 @@ import Button from "../components/Button.astro";
     <Button href="/">Get in touch</Button>
   </nav>
   <main>
-    <section class="card-list">
-      <Card
-        title="Maria Miramar"
-        subtitle="Berlin"
-        description="Digital Creator"
-        img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-      />
-      <Card
-        title="Maria Miramar"
-        subtitle="Berlin"
-        description="Digital Creator"
-        img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-      />
-      <Card
-        title="Maria Miramar"
-        subtitle="Berlin"
-        description="Digital Creator"
-        img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-      />
+    <section>
+      <h3>Artists</h3>
+      <div class="card-list">
+        <Card
+          title="Maria Miramar"
+          subtitle="Berlin"
+          description="Digital Creator"
+          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        />
+        <Card
+          title="Maria Miramar"
+          subtitle="Berlin"
+          description="Digital Creator"
+          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        />
+        <Card
+          title="Maria Miramar"
+          subtitle="Berlin"
+          description="Digital Creator"
+          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        />
+      </div>
     </section>
   </main>
 </Layout>
@@ -50,6 +54,13 @@ import Button from "../components/Button.astro";
     align-items: center;
     margin: 1rem auto 2rem;
     padding: 0 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    letter-spacing: 0.4rem;
   }
   .menu {
     display: flex;
