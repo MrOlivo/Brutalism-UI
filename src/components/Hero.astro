@@ -1,0 +1,60 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="container">
+  <div class="content-text">
+    <p class="text">
+      Expanding on landscape art as being limited to paintings of lush green
+      hills, enjoy art that reflects the diversity of the Landscape and the
+      communities that inhabit it.
+    </p>
+    <div class="cta">
+      <Button href="#">Book your visit</Button>
+    </div>
+    <h2>Radical landscapes: Art, identity and activism</h2>
+  </div>
+  <div class="content-image">
+    <img
+      src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+      alt="woman in black long-sleeved shirt sitting on the floor"
+      class="image"
+    />
+  </div>
+</div>
+<style>
+  h2,
+  p {
+    margin: 0;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .container {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .content-text {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 3rem 1rem 3rem 2.5rem;
+  }
+  .content-image {
+    width: 50%;
+    border-left: 2px solid black;
+  }
+  .image {
+    width: 100%;
+    height: 470px;
+    display: block;
+    object-fit: cover;
+  }
+  .text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .cta {
+    margin: 3rem 0;
+  }
+</style>
