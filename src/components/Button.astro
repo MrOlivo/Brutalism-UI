@@ -1,0 +1,28 @@
+---
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href} class="button">
+  <slot />
+</a>
+<style>
+  .button {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f6f6ff;
+    background-color: #000000;
+    padding: 0.5ch 4em;
+    transition: all 200ms ease-in;
+  }
+  .button:hover {
+    color: #3322f5;
+    background-color: #c3ff76;
+    box-shadow: 6px 6px #3322f5;
+    transform: translate(-4px, -4px);
+  }
+</style>
