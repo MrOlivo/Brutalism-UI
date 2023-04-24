@@ -1,0 +1,32 @@
+---
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<li class="nav-item">
+  <a href={href}>
+    <slot />
+  </a>
+</li>
+<style>
+  li {
+    list-style: none;
+  }
+  .nav-item {
+    height: 24px;
+  }
+  .nav-item > a {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 0.15em;
+  }
+  .nav-item:hover > a {
+    color: #3322f5;
+  }
+</style>
