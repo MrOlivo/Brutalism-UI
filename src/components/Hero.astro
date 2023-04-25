@@ -56,4 +56,22 @@ import Button from "./Button.astro";
   .cta {
     margin: 3rem 0;
   }
+
+  @media (max-width: 960px) {
+    .container {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .content-text,
+    .content-image {
+      width: 100%;
+    }
+    .content-text {
+      text-align: center;
+    }
+    .content-image {
+      border-top: 2px solid black;
+      border-left: none;
+    }
+  }
 </style>
