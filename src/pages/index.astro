@@ -4,7 +4,7 @@ import Card from "../components/Card.astro";
 import MenuItem from "../components/MenuItem.astro";
 import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
-import RollingBanner from "../components/RollingBanner.astro";
+import ScrollingBanner from "../components/Banner/ScrollingBanner.astro";
 
 const artists = [
   {
@@ -40,7 +40,7 @@ const artists = [
     <Hero />
   </header>
   <main>
-    <section>
+    <section class="section-container">
       <h2 class="section-header">Artists</h2>
       <div class="card-list">
         {
@@ -55,8 +55,8 @@ const artists = [
         }
       </div>
     </section>
-    <section>
-      <RollingBanner />
+    <section class="section-container">
+      <ScrollingBanner />
     </section>
   </main>
 </Layout>
@@ -79,6 +79,9 @@ const artists = [
   }
   header {
     padding: 0;
+  }
+  .section-container {
+    overflow: hidden;
   }
   .section-header {
     font-size: 2.5rem;

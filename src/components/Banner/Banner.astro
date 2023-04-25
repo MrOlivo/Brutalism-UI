@@ -1,32 +1,42 @@
 ---
-import Star from "../assets/star.png";
+import Star from "../../assets/star.png";
 ---
 
-<div class="rolling-banner">
-  <span class="first">This a rolling banner</span>
-  <img src={Star} alt="Drawing of a star" />
+<div class="banner">
   <span>This a rolling banner</span>
   <img src={Star} alt="Drawing of a star" />
   <span>This a rolling banner</span>
   <img src={Star} alt="Drawing of a star" />
   <span>This a rolling banner</span>
+  <img src={Star} alt="Drawing of a star" />
+  <span>This a rolling banner</span>
+  <img src={Star} alt="Drawing of a star" />
 </div>
+
 <style>
-  .rolling-banner {
+  .banner {
     padding: 1.75rem 0;
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     animation: bannermove 20s linear infinite;
+    text-align: center;
+  }
+  .banner span {
+    display: block;
+    min-width: 25rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
   }
   @keyframes bannermove {
     from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
+      -moz-transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
     }
     to {
       -moz-transform: translateX(-100%);
