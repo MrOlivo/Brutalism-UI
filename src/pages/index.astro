@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import MenuItem from "../components/MenuItem.astro";
 import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
+import RollingBanner from "../components/RollingBanner.astro";
 
 const artists = [
   {
@@ -54,13 +55,16 @@ const artists = [
         }
       </div>
     </section>
+    <section>
+      <RollingBanner />
+    </section>
   </main>
 </Layout>
 
 <style is:global>
   nav,
   header,
-  main {
+  section {
     margin: auto;
     padding: 1.5rem 3.5rem;
     max-width: 1280px;
