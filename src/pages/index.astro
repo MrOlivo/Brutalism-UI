@@ -4,6 +4,27 @@ import Card from "../components/Card.astro";
 import MenuItem from "../components/MenuItem.astro";
 import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
+
+const artists = [
+  {
+    title: "Maria Miramar",
+    subtitle: "Berlin",
+    description: "Digital Creator",
+    img: "https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1885&q=80",
+  },
+  {
+    title: "Ben Karl",
+    subtitle: "Amsterdam",
+    description: "Audio-Video Artist",
+    img: "https://images.unsplash.com/photo-1507081323647-4d250478b919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+  },
+  {
+    title: "Alana David",
+    subtitle: "Berlin",
+    description: "Installation Artist",
+    img: "https://images.unsplash.com/photo-1517779548443-852211706367?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
@@ -21,24 +42,9 @@ import Hero from "../components/Hero.astro";
     <section>
       <h3>Artists</h3>
       <div class="card-list">
-        <Card
-          title="Maria Miramar"
-          subtitle="Berlin"
-          description="Digital Creator"
-          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
-        <Card
-          title="Maria Miramar"
-          subtitle="Berlin"
-          description="Digital Creator"
-          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
-        <Card
-          title="Maria Miramar"
-          subtitle="Berlin"
-          description="Digital Creator"
-          img="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
+        {artists.map((item) => (
+          <Card title={item.title} subtitle={item.subtitle} description={item.description} img={item.img} />
+        ))}
       </div>
     </section>
   </main>
@@ -75,8 +81,14 @@ import Hero from "../components/Hero.astro";
     gap: 1.5rem;
   }
   .card-list {
+    width: 100%;
     display: flex;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 5rem;
+  }
+  .card-list::-webkit-scrollbar {
+    display: none;
   }
   @media (max-width: 768px) {
     .card-list {
