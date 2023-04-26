@@ -106,14 +106,15 @@ const artists = [
     display: none;
   }
   @media (max-width: 768px) {
-    .card-list {
-      flex-direction: column;
-    }
     nav > .button {
       padding: 0.5ch 0.5em;
     }
   }
   @media (max-width: 425px) {
+    .card-list {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
     nav {
       flex-wrap: wrap;
       justify-content: center;
