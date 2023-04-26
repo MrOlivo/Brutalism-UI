@@ -57,6 +57,12 @@ import Button from "./Button.astro";
     margin: 3rem 0;
   }
 
+  @media (max-width: 425px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
   @media (max-width: 960px) {
     .container {
       flex-wrap: wrap;
@@ -68,6 +74,7 @@ import Button from "./Button.astro";
     }
     .content-text {
       text-align: center;
+      padding: 3rem 1rem;
     }
     .content-image {
       border-top: 2px solid black;
