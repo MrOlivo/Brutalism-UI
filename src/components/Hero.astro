@@ -55,6 +55,7 @@ import Button from "./Button.astro";
   }
   .cta {
     margin: 3rem 0;
+    display: flex;
   }
 
   @media (max-width: 425px) {
@@ -79,6 +80,9 @@ import Button from "./Button.astro";
     .content-image {
       border-top: 2px solid black;
       border-left: none;
+    }
+    .cta {
+      justify-content: center;
     }
   }
 </style>
