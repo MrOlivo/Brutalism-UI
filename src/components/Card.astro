@@ -59,7 +59,8 @@ const { title, subtitle, description, img } = Astro.props;
     transition: all 200ms ease-in-out;
   }
   .link-card:hover .image {
-    box-shadow: 8px 8px #c3ff76;
+    box-shadow: 10px 8px #c3ff76;
+    transform: translate(-10px, -8px);
   }
   .link-card:is(:hover, :focus-within) p,
   .link-card:is(:hover, :focus-within) h3,
