@@ -44,7 +44,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ## 🚀 Project Inspiration
 
-This project was inspireb by [Oana Marin's concept](https://www.figma.com/community/file/1101090285788087600) shared on the [Figma community web.](https://www.figma.com/community/)
+This project was inspired by [Oana Marin's concept](https://www.figma.com/community/file/1101090285788087600) shared on the [Figma community web.](https://www.figma.com/community/)
 
 ## 🧞 Commands
 
