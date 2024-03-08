@@ -1,16 +1,18 @@
 ---
-import Star from "../../assets/star.png";
+import { Image } from "astro:assets";
+import star from "@assets/star.png";
 ---
 
 <div class="banner">
   <span>This is a rolling banner</span>
-  <img src={Star} alt="Drawing of a star" />
+  <Image src={star} alt="Drawing of a star"/>
   <span>This is a rolling banner</span>
-  <img src={Star} alt="Drawing of a star" />
+  <Image src={star} alt="Drawing of a star"/>
   <span>This is a rolling banner</span>
-  <img src={Star} alt="Drawing of a star" />
+  <Image src={star} alt="Drawing of a star"/>
   <span>This is a rolling banner</span>
-  <img src={Star} alt="Drawing of a star" />
+  <Image src={star} alt="Drawing of a star"/>
+  
 </div>
 
 <style>
